@@ -16,7 +16,7 @@ function personalityQuiz() {
   elem.innerHTML = "\
   <form id='pqform' method='POST'>\
   <p class='pqtext'>Link your Spotify account here (not required):</p>\
-  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Start Quiz</button><br>\
+  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Login with Spotify</button><br>\
   </form>\
   <button type='submit' onclick='nextQ(0)' id='pqsub' class='submitbtn f1'>Start Quiz</button><br>\
   ";
