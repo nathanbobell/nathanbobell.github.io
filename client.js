@@ -26,7 +26,7 @@ function personalityQuiz() {
 }
 
 function requestAuthorization(){
-    let url = AUTHORIZE;
+    let url = "https://accounts.spotify.com/authorize";
     url += "?client_id=" + clientId;
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
