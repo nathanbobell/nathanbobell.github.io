@@ -1,5 +1,6 @@
 const clientId = '68ffa021ac954ab6b28022d8f324fe59';
 const clientSecret = '675a0c74380745d198b52871eb69acee';
+var redirect_uri = 'https://www.musexplore.com';
 
 var ans = {};
 var spot;
@@ -22,6 +23,16 @@ function personalityQuiz() {
   $("#countrySelect").fadeIn();
   $("#quiz").fadeIn();
   $("#req").fadeOut(1);
+}
+
+function requestAuthorization(){
+    let url = AUTHORIZE;
+    url += "?client_id=" + clientId;
+    url += "&response_type=code";
+    url += "&redirect_uri=" + encodeURI(redirect_uri);
+    url += "&show_dialog=true";
+    url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
+    window.location.href = url; // Show Spotify's authorization screen
 }
 
 function fadeToNext(q) {
