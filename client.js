@@ -1,9 +1,6 @@
 const clientId = '68ffa021ac954ab6b28022d8f324fe59';
 const clientSecret = '675a0c74380745d198b52871eb69acee';
 
-var redirect_uri = "C:\\Users\\ual-laptop\\OneDrive - University of Arizona\\Desktop\\adams versin\\website\\home.html";
-console.log(redirect_uri)
-
 var ans = {};
 var spot;
 var country;
@@ -18,27 +15,13 @@ function personalityQuiz() {
   elem.innerHTML = "\
   <form id='pqform' method='POST'>\
   <p class='pqtext'>Link your Spotify account here (not required):</p>\
-  <button onclick='requestAuthorization()' id='authBttn' f1'>Authorize Spotify</button><br>\
+  <input placeholder='Paste Spotify URL here' id='spotURL2' type='text'><br>\
   </form>\
   <button type='submit' onclick='nextQ(0)' id='pqsub' class='submitbtn f1'>Start Quiz</button><br>\
   ";
   $("#countrySelect").fadeIn();
   $("#quiz").fadeIn();
   $("#req").fadeOut(1);
-
-}
-
-function requestAuthorization(){
-
-  let url = "https://accounts.spotify.com/authorize";
-  url += "?client_id=" + clientId;
-  url += "&response_type=code";
-  url += "&redirect_uri=" + encodeURI(redirect_uri);
-  url += "&show_dialog=true";
-  url += "&scope=user-read-private user-read-email user-modify-playback-state user-read-playback-position user-library-read streaming user-read-playback-state user-read-recently-played playlist-read-private";
-  console.log(url)
-  
-  window.location.href = url; // Show Spotify's authorization screen
 }
 
 function fadeToNext(q) {
@@ -100,21 +83,12 @@ function displayValue(question) {
         output.innerHTML = "Always";
       }
     } else if (question == 'q4') {
-      // Values are to make it easy to put into spotify API. 
-      // Since duration feature is length in ms, just multiply this value by 3000.
-      // TODO: covert to 0-100 scale like q8
-      if (this.value == 20) {
+      if (this.value == 0) {
         output.innerHTML = "1 minute or less";
-      }else if (this.value > 20 && this.value <= 40) {
-        output.innerHTML = "1 to 2 minutes";
-      } else if (this.value > 40 && this.value <= 60) {
-        output.innerHTML = "2 to 3 minutes";
-      } else if (this.value > 60 && this.value <= 80) {
-        output.innerHTML = "3 to 4 minutes";
-      } else if (this.value > 80 && this.value < 100) {
-        output.innerHTML = "4 to 5 minutes";
-      } else if (this.value == 100) {
-        output.innerHTML = "Over 5 minutes";
+      } else if (this.value == 10) {
+        output.innerHTML = "10 minutes or more";
+      } else {
+        output.innerHTML = `${this.value} to ${parseInt(this.value) + 1} minutes`;
       }
     } else if (question == 'q5') {
       if (this.value == 0) {
@@ -191,7 +165,7 @@ function nextQ(q) {
   switch (q) {
     case 0:
       country = document.getElementById('country').value;
-      //spotURL2 = document.getElementById("spotURL2").value;
+      spotURL2 = document.getElementById("spotURL2").value;
       $("#countrySelect").fadeOut();
       fadeToNext(1);
       break;
@@ -871,8 +845,6 @@ async function showResults(){
   </div>';
   body.innerHTML = bodyHTML;
 }
-
-
 
 function showCountrySelector() {
   var cs = document.getElementById("countrySelect");
