@@ -31,8 +31,7 @@ function requestAuthorization(){
     url += "&response_type=code";
     url += "&redirect_uri=" + encodeURI(redirect_uri);
     url += "&show_dialog=true";
-    url += "&scope=user-top-read
-";
+    url += "&scope=user-top-read";
     window.location.href = url; // Show Spotify's authorization screen
 }
 
