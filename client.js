@@ -517,6 +517,8 @@ function inputSpotifyURL() {
   var pq = document.getElementById("quiz");
   showCountrySelector();
   country = document.getElementById('country').value;
+  localStorage.setItem("country", country);
+
   pq.innerHTML = "";
   elem.innerHTML = "<p>Link your Spotify account here:</p>\
   <form method='POST' action='loading.html'>\
@@ -531,7 +533,7 @@ function inputSpotifyURL() {
 
 function getRecFromURL() {
   var country = document.getElementById('country').value;
-  var spotURL2 = document.getElementById("spotURL2").value;
+  //var spotURL2 = document.getElementById("spotURL2").value;
 
   if (spotURL2 != '') {
     console.log(country);
@@ -665,6 +667,7 @@ function recAlg(){
       "Vietnamese",
       "South%20African",      
       ];
+      country = localStorage.setItem("country");
       console.log(country)
       const index = countries.indexOf(country)
       console.log(countries)
