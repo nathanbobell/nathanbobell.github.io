@@ -156,7 +156,7 @@ function personalityQuiz() {
 
 function requestAuthorization(){
     country = document.getElementById('country').value;
-    console.log(country)
+    localStorage.setItem("country", country);
     let url = "https://accounts.spotify.com/authorize";
     url += "?client_id=" + clientId;
     url += "&response_type=code";
@@ -307,6 +307,8 @@ function nextQ(q) {
   switch (q) {
     case 0:
       country = document.getElementById('country').value;
+      localStorage.setItem("client_id", client_id);
+
       //spotURL2 = document.getElementById("spotURL2").value;
       $("#countrySelect").fadeOut();
       fadeToNext(1);
@@ -666,6 +668,9 @@ function recAlg(){
       "Vietnamese",
       "South%20African",      
       ];
+    
+      country = localStorage.getItem("country");
+
       console.log(country)
       const index = countries.indexOf(country)
       console.log(countries)
