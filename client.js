@@ -108,7 +108,7 @@ function addToGenreDict(genre, genreList) {
   genre.forEach(genre => {
     genreList.push(genre);
   });
-  return genreDict;
+  return genreList;
 }
 
 function callApi(method, url, body, callback){
