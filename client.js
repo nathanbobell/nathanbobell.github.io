@@ -332,9 +332,6 @@ function nextQ(q) {
       break;
 
     case 2:
-     
-      country = document.getElementById('country').value;
-
       //addLastAnsToDict(q);
       elem.innerHTML = "\
       <p class='sm'>Question 2 / 10</p>\
@@ -522,10 +519,9 @@ function inputSpotifyURL() {
   
   pq.innerHTML = "";
   elem.innerHTML = "<p>Link your Spotify account here:</p>\
-  <form method='POST' action='loading.html'>\
-  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Login with Spotify</button><br>\
+  <form method='POST'>\
   </form>\
-  <button type='submit' onclick='getRecFromURL()' class='submitbtn f1'>Get recommendations</button>\
+  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Login with Spotify</button><br>\
   ";
   $("#countrySelect").fadeIn();
   $("#spot").fadeIn();
