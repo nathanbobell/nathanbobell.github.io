@@ -8,6 +8,12 @@ var country;
 var genre;
 var results;
 
+function onPageLoad(){
+  if (window.location.search.length > 0){
+    showResults();
+  }
+}
+
 function personalityQuiz() {
   var elem = document.getElementById("quiz");
   var spot = document.getElementById("spot");
