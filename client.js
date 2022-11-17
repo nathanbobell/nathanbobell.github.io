@@ -665,6 +665,7 @@ function recAlg(){
       "Vietnamese",
       "South%20African",      
       ];
+      console.log(country)
       const index = countries.indexOf(country)
       console.log(countries)
       countries.splice(index,1)
