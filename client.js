@@ -155,6 +155,8 @@ function personalityQuiz() {
 }
 
 function requestAuthorization(){
+    country = document.getElementById('country').value;
+    console.log(country)
     let url = "https://accounts.spotify.com/authorize";
     url += "?client_id=" + clientId;
     url += "&response_type=code";
