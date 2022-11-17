@@ -574,7 +574,7 @@ function recAlg(){
 
 
       //MY CODE
-      const countries = ["United%20Arab%20Emirates",
+       let countries = ["United%20Arab%20Emirates",
       "Albanian",
       "Argentinan",
       "Austrian",
