@@ -155,7 +155,6 @@ function personalityQuiz() {
 }
 
 function requestAuthorization(){
-    country = document.getElementById('country').value;
     let url = "https://accounts.spotify.com/authorize";
     url += "?client_id=" + clientId;
     url += "&response_type=code";
@@ -517,6 +516,7 @@ function inputSpotifyURL() {
   var elem = document.getElementById("spot");
   var pq = document.getElementById("quiz");
   showCountrySelector();
+  country = document.getElementById('country').value;
   pq.innerHTML = "";
   elem.innerHTML = "<p>Link your Spotify account here:</p>\
   <form method='POST' action='loading.html'>\
