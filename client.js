@@ -83,14 +83,6 @@ function getUsersTopTracksAndGenres(){
    callApi( "GET", "https://api.spotify.com/v1/me/top/artists", null, handleArtistsResponse);
 }
 
-function callApi(method, url, body, callback){
-    let xhr = new XMLHttpRequest();
-    xhr.open(method, url, true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
-    xhr.send(body);
-    xhr.onload = callback;
-}
 
 function handleArtistsResponse(){
     if ( this.status == 200 ){
@@ -104,6 +96,15 @@ function handleArtistsResponse(){
         console.log(this.responseText);
         alert(this.responseText);
     }
+}
+
+function callApi(method, url, body, callback){
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.send(body);
+    xhr.onload = callback;
 }
 
 function personalityQuiz() {
