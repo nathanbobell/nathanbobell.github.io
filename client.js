@@ -79,6 +79,33 @@ function handleAuthorizationResponse(){
     }
 }
 
+function getUsersTopTracksAndGenres(){
+   callApi( "GET", "https://api.spotify.com/v1/me/top/artists", null, handleArtistsResponse);
+}
+
+function callApi(method, url, body, callback){
+    let xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.setRequestHeader('Authorization', 'Bearer ' + access_token);
+    xhr.send(body);
+    xhr.onload = callback;
+}
+
+function handleDevicesResponse(){
+    if ( this.status == 200 ){
+        var data = JSON.parse(this.responseText);
+        console.log(data);
+    }
+    else if ( this.status == 401 ){
+        refreshAccessToken()
+    }
+    else {
+        console.log(this.responseText);
+        alert(this.responseText);
+    }
+}
+
 function personalityQuiz() {
   var elem = document.getElementById("quiz");
   var spot = document.getElementById("spot");
