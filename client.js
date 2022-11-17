@@ -90,7 +90,7 @@ function handleArtistsResponse(){
         var data = JSON.parse(this.responseText);
         console.log(data);
       let genreDict = {};
-      data.artists.forEach(artist => {
+      data.items.forEach(artist => {
       genreDict = addToGenreDict(artist.genres, genreDict);
     })
       console.log(genreDict);
