@@ -676,7 +676,7 @@ function recAlg(){
           const country2 = countries[randomCountry];
           const index = countries.indexOf(country2)
           countries.splice(index,1)
-          //console.log(country);
+          console.log(countries);
           //console.log(`https://api.spotify.com/v1/search?q=${country2}%20${genreId}&type=playlist&limit=2`)
           const result = await fetch(`https://api.spotify.com/v1/search?q=${country2}%20${genreId}&type=playlist&limit=2&offset=5`, {
               method: 'GET',
