@@ -174,7 +174,7 @@ function nextQ(q) {
   switch (q) {
     case 0:
       country = document.getElementById('country').value;
-      spotURL2 = document.getElementById("spotURL2").value;
+      //spotURL2 = document.getElementById("spotURL2").value;
       $("#countrySelect").fadeOut();
       fadeToNext(1);
       break;
