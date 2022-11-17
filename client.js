@@ -10,6 +10,7 @@ var results;
 
 function onPageLoad(){
   if (window.location.search.length > 0){
+    console.log("HI);
     showResults();
   }
 }
