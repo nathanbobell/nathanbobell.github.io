@@ -89,6 +89,11 @@ function handleArtistsResponse(){
     if ( this.status == 200 ){
         var data = JSON.parse(this.responseText);
         console.log(data);
+      let genreDict = {};
+      data.artists.forEach(artist => {
+      genreDict = addToGenreDict(artist.genres, genreDict);
+    }
+      console.log(genreDict);
     }
     else if ( this.status == 401 ){
         refreshAccessToken()
