@@ -307,7 +307,7 @@ function nextQ(q) {
   switch (q) {
     case 0:
       country = document.getElementById('country').value;
-      localStorage.setItem("client_id", client_id);
+      localStorage.setItem("country", country);
 
       //spotURL2 = document.getElementById("spotURL2").value;
       $("#countrySelect").fadeOut();
