@@ -110,8 +110,9 @@ function handleArtistsResponse(){
         }
         m=0;
       }
-    console.log(item+" ( " +mf +" times ) ") ;
       console.log(arr1);
+      genre = item;
+      console.log(item+" ( " +mf +" times ) ") ;
     }
     else if ( this.status == 401 ){
         refreshAccessToken()
