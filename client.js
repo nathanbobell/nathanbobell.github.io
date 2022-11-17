@@ -92,7 +92,7 @@ function callApi(method, url, body, callback){
     xhr.onload = callback;
 }
 
-function handleDevicesResponse(){
+function handleArtistsResponse(){
     if ( this.status == 200 ){
         var data = JSON.parse(this.responseText);
         console.log(data);
