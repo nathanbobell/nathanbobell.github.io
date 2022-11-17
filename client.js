@@ -667,7 +667,7 @@ function recAlg(){
       "Vietnamese",
       "South%20African",      
       ];
-      country = localStorage.setItem("country");
+      country = localStorage.getItem("country");
       console.log(country)
       const index = countries.indexOf(country)
       console.log(countries)
