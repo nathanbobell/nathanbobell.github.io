@@ -665,6 +665,7 @@ function recAlg(){
       "South%20African",      
       ];
       const index = countries.indexOf(country)
+      console.log(countries)
       countries.splice(index,1)
       console.log(countries)
       const playlists = [];
@@ -991,6 +992,7 @@ function showCountrySelector() {
   var cs = document.getElementById("countrySelect");
   cs.innerHTML = "<label for='country' id='ctLab'>Select your country of origin:</label><br>\
       <select id='country' name='country' class='form-control' required>\
+      <option value='United%20Arab%20Emirates'>United Arab Emirates</option>\
       <option value='Albanian'>Albanian</option>\
       <option value='Argentinan'>Argentinan</option>\
       <option value='Austrian'>Austrian</option>\
@@ -1006,12 +1008,12 @@ function showCountrySelector() {
       <option value='Switzerland'>Switzerland</option>\
       <option value='Chilean'>Chilean</option>\
       <option value='Colombian'>Colombian</option>\
-      <option value='Costa%20Rican'>Costa%20Rican</option>\
+      <option value='Costa%20Rican'>Costa Rican</option>\
       <option value='Cyprus'>Cyprus</option>\
-      <option value='Czech%20Republic'>Czech%20Republic</option>\
+      <option value='Czech%20Republic'>Czech Republic</option>\
       <option value='German'>German</option>\
       <option value='Denmark'>Denmark</option>\
-      <option value='Dominican%20Republic'>Dominican%20Republic</option>\
+      <option value='Dominican%20Republic'>Dominican Republic</option>\
       <option value='Algerian'>Algerian</option>\
       <option value='Ecuadorian'>Ecuadorian</option>\
       <option value='Estonian'>Estonian</option>\
@@ -1022,7 +1024,7 @@ function showCountrySelector() {
       <option value='UK'>UK</option>\
       <option value='Greek'>Greek</option>\
       <option value='Guatemalan'>Guatemalan</option>\
-      <option value='Hong%20Kong'>Hong%20Kong</option>\
+      <option value='Hong%20Kong'>Hong Kong</option>\
       <option value='Honduras'>Honduras</option>\
       <option value='Croatian'>Croatian</option>\
       <option value='Hungarian'>Hungarian</option>\
@@ -1032,7 +1034,7 @@ function showCountrySelector() {
       <option value='Indian'>Indian</option>\
       <option value='Icelandic'>Icelandic</option>\
       <option value='Italian'>Italian</option>\
-      <option value='Hashemite%20Kingdom%20Of%20Jordan'>Hashemite%20Kingdom%20Of%20Jordan</option>\
+      <option value='Hashemite%20Kingdom%20Of%20Jordan'>Hashemite Kingdom Of Jordan</option>\
       <option value='Japanese'>Japanese</option>\
       <option value='Kuwait'>Kuwait</option>\
       <option value='Kazakhstan'>Kazakhstan</option>\
@@ -1052,7 +1054,7 @@ function showCountrySelector() {
       <option value='Nicaraguan'>Nicaraguan</option>\
       <option value='Netherlands'>Netherlands</option>\
       <option value='Norway'>Norway</option>\
-      <option value='New%20Zealand'>New%20Zealand</option>\
+      <option value='New%20Zealand'>New Zealand</option>\
       <option value='Oman'>Oman</option>\
       <option value='Panama'>Panama</option>\
       <option value='Peruvian'>Peruvian</option>\
@@ -1064,20 +1066,20 @@ function showCountrySelector() {
       <option value='Qatar'>Qatar</option>\
       <option value='Romanian'>Romanian</option>\
       <option value='Serbian'>Serbian</option>\
-      <option value='Saudi%20Arabia'>Saudi%20Arabia</option>\
+      <option value='Saudi%20Arabia'>Saudi Arabia</option>\
       <option value='Swedish'>Swedish</option>\
       <option value='Singapore'>Singapore</option>\
       <option value='Slovenian'>Slovenian</option>\
       <option value='Slovakian'>Slovakian</option>\
-      <option value='El%20Salvador'>El%20Salvador</option>\
+      <option value='El%20Salvador'>El Salvador</option>\
       <option value='Thailand'>Thailand</option>\
       <option value='Tunisia'>Tunisia</option>\
       <option value='Turkish'>Turkish</option>\
       <option value='Taiwanese'>Taiwanese</option>\
       <option value='Ukraine'>Ukraine</option>\
-      <option value='United%20States'>United%20States</option>\
+      <option value='United%20States'>United States</option>\
       <option value='Uruguay'>Uruguay</option>\
       <option value='Vietnamese'>Vietnamese</option>\
-      <option value='South%20African'>South%20African</option>\
+      <option value='South%20African'>South African</option>\
       </select>"
 }
