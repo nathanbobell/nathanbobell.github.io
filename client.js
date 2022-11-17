@@ -66,6 +66,7 @@ function handleAuthorizationResponse(){
         if ( data.access_token != undefined ){
             access_token = data.access_token;
             localStorage.setItem("access_token", access_token);
+            getUsersTopTracksAndGenres()
         }
         if ( data.refresh_token  != undefined ){
             refresh_token = data.refresh_token;
