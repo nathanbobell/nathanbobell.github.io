@@ -475,7 +475,7 @@ function nextQ(q) {
       addLastAnsToDict(q);
       elem.innerHTML = "\
       <p class='sm'>Question 10 / 10</p>\
-      <form id='pqform' method='POST' action='loading.html'>\
+      <form id='pqform' method='POST'>\
       <p class='pqtext'>Do you prefer happy or sad music?</p>\
       <div class='question center'>\
       <input type='range' min='0' max='100' value='0' class='slider' id='q10'>\
@@ -965,7 +965,7 @@ async function showResults(){
 
   var body = document.getElementById("body");
   var bodyHTML = '<header>\
-  <a href="home.html" class="homebtn">\
+  <a href="index.html" class="homebtn">\
   <div class="title f1 c1 fc center">MusExplore</div>\
   </a>\
   </header>\
@@ -988,7 +988,7 @@ async function showResults(){
           bodyHTML += `<iframe style="border-radius:12px" src=${trackEmbed} width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
 }
  bodyHTML += '</div>\
-  <a href="home.html" class="submitbtn gohome">\
+  <a href="index.html" class="submitbtn gohome">\
   <button id="gohome">Try Again</button>\
   </a>\
   </div>\
