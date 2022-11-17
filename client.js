@@ -10,8 +10,8 @@ var results;
 
 function onPageLoad(){
   if (window.location.search.length > 0){
-    console.log("HI");
-    showResults();
+    console.log("Spotify Authorization Recevied");
+    nextQ(0);
   }
 }
 
