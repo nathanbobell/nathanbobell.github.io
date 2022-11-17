@@ -1000,6 +1000,7 @@ function showCountrySelector() {
   var cs = document.getElementById("countrySelect");
   cs.innerHTML = "<label for='country' id='ctLab'>Select your country of origin:</label><br>\
       <select id='country' name='country' class='form-control' required>\
+      <option value='United%20States'>United States</option>\
       <option value='United%20Arab%20Emirates'>United Arab Emirates</option>\
       <option value='Albanian'>Albanian</option>\
       <option value='Argentinan'>Argentinan</option>\
@@ -1085,7 +1086,6 @@ function showCountrySelector() {
       <option value='Turkish'>Turkish</option>\
       <option value='Taiwanese'>Taiwanese</option>\
       <option value='Ukraine'>Ukraine</option>\
-      <option value='United%20States'>United States</option>\
       <option value='Uruguay'>Uruguay</option>\
       <option value='Vietnamese'>Vietnamese</option>\
       <option value='South%20African'>South African</option>\
