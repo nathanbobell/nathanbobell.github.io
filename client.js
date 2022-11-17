@@ -525,7 +525,7 @@ function inputSpotifyURL() {
   elem.innerHTML = "<p>Link your Spotify account here:</p>\
   <form method='POST'>\
   </form>\
-  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Login with Spotify</button><br>\
+  <button type='button' onclick='requestAuthorization()' id='spotifyAuth' class='submitbtn f1'>Login & Start Quiz</button><br>\
   ";
   $("#countrySelect").fadeIn();
   $("#spot").fadeIn();
