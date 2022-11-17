@@ -104,6 +104,13 @@ function handleArtistsResponse(){
     }
 }
 
+function addToGenreDict(genre, genreDict) {
+  genre.forEach(genre => {
+    genreDict['genre'] = (genreDict['genre'] || 0) + 1;
+  });
+  return genreDict;
+}
+
 function callApi(method, url, body, callback){
     let xhr = new XMLHttpRequest();
     xhr.open(method, url, true);
