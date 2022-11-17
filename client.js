@@ -89,11 +89,11 @@ function handleArtistsResponse(){
     if ( this.status == 200 ){
         var data = JSON.parse(this.responseText);
         console.log(data);
-      let genreDict = {};
+      let genreList = [];
       data.items.forEach(artist => {
-      genreDict = addToGenreDict(artist.genres, genreDict);
+      genreList = addToGenreDict(artist.genres, genreList);
     })
-      console.log(genreDict);
+      console.log(genreList);
     }
     else if ( this.status == 401 ){
         refreshAccessToken()
@@ -104,9 +104,9 @@ function handleArtistsResponse(){
     }
 }
 
-function addToGenreDict(genre, genreDict) {
+function addToGenreDict(genre, genreList) {
   genre.forEach(genre => {
-    genreDict['genre'] = (genreDict['genre'] || 0) + 1;
+    genreList.push(genre);
   });
   return genreDict;
 }
