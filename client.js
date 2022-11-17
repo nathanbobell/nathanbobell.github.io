@@ -92,7 +92,7 @@ function handleArtistsResponse(){
       let genreDict = {};
       data.artists.forEach(artist => {
       genreDict = addToGenreDict(artist.genres, genreDict);
-    }
+    })
       console.log(genreDict);
     }
     else if ( this.status == 401 ){
