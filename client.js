@@ -36,8 +36,8 @@ function fetchAccessToken( code ){
     let body = "grant_type=authorization_code";
     body += "&code=" + code; 
     body += "&redirect_uri=" + encodeURI(redirect_uri);
-    body += "&client_id=" + client_id;
-    body += "&client_secret=" + client_secret;
+    body += "&client_id=" + clientId;
+    body += "&client_secret=" + clientSecret;
     callAuthorizationApi(body);
 }
 
@@ -45,7 +45,7 @@ function refreshAccessToken(){
     refresh_token = localStorage.getItem("refresh_token");
     let body = "grant_type=refresh_token";
     body += "&refresh_token=" + refresh_token;
-    body += "&client_id=" + client_id;
+    body += "&client_id=" + clientId;
     callAuthorizationApi(body);
 }
 
@@ -53,7 +53,7 @@ function callAuthorizationApi(body){
     let xhr = new XMLHttpRequest();
     xhr.open("POST", TOKEN, true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.setRequestHeader('Authorization', 'Basic ' + btoa(client_id + ":" + client_secret));
+    xhr.setRequestHeader('Authorization', 'Basic ' + btoa(clientId + ":" + clientSecret));
     xhr.send(body);
     xhr.onload = handleAuthorizationResponse;
 }
