@@ -332,6 +332,9 @@ function nextQ(q) {
       break;
 
     case 2:
+     
+      country = document.getElementById('country').value;
+
       //addLastAnsToDict(q);
       elem.innerHTML = "\
       <p class='sm'>Question 2 / 10</p>\
@@ -516,9 +519,7 @@ function inputSpotifyURL() {
   var elem = document.getElementById("spot");
   var pq = document.getElementById("quiz");
   showCountrySelector();
-  country = document.getElementById('country').value;
-  localStorage.setItem("country", country);
-
+  
   pq.innerHTML = "";
   elem.innerHTML = "<p>Link your Spotify account here:</p>\
   <form method='POST' action='loading.html'>\
@@ -667,7 +668,6 @@ function recAlg(){
       "Vietnamese",
       "South%20African",      
       ];
-      country = localStorage.getItem("country");
       console.log(country)
       const index = countries.indexOf(country)
       console.log(countries)
