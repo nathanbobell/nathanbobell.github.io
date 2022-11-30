@@ -986,7 +986,7 @@ async function showResults(){
           // console.log(trackObject)
           let trackEmbed = "https://open.spotify.com/embed/track/" + Object.values(results)[i] + "?utm_source=generator&theme=0"
           bodyHTML += `<iframe style="border-radius:12px" src=${trackEmbed} width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>`;
-}
+//}
  bodyHTML += '</div>\
   <a href="index.html" class="submitbtn gohome">\
   <button id="gohome">Try Again</button>\
