@@ -976,11 +976,11 @@ async function showResults(){
       <div class="results">\
           <div class="song">'
 
-          for(let i = 0; i < Object.keys(results).length; i ++){
-            const result2 = await fetch(`https://api.spotify.com/v1/tracks/${Object.values(results)[i]}`, {
-              method: 'GET',
-              headers: { 'Authorization': 'Bearer ' + thisToken }
-          });
+          //for(let i = 0; i < Object.keys(results).length; i ++){
+           // const result2 = await fetch(`https://api.spotify.com/v1/tracks/${Object.values(results)[i]}`, {
+            //  method: 'GET',
+           //   headers: { 'Authorization': 'Bearer ' + thisToken }
+        //  });
       
           // const trackObject = await result2.json();
           // console.log(trackObject)
